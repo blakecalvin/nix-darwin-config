@@ -16,6 +16,7 @@ with pkgs; [
   wget
   tailscale
   gh
+  gitui
   #zip
 
   # Encryption and security tools
