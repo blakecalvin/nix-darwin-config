@@ -17,4 +17,5 @@ Updating dependencies with one command
 ./bin/build
 ```
 
+> [!NOTE]
 > Based off of https://github.com/dustinlyons/nixos-config
