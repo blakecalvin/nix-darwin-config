@@ -304,11 +304,13 @@ let name = "Blake";
       '';
     };
 
-    direnv = {
-        enable = true;
-        enableBashIntegration = true; # see note on other shells below
-        nix-direnv.enable = true;
-    };
+    # Setup later...
+    # Used to load env when changing into directory with .envrc setup
+    # direnv = {
+    #     enable = true;
+    #     enableBashIntegration = true; # see note on other shells below
+    #     nix-direnv.enable = true;
+    # };
 
-    bash.enable = true; # see note on other shells below
+    # bash.enable = true; # see note on other shells below
 }
