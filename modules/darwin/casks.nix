@@ -4,6 +4,7 @@ _:
   # -- Development Tools --
   "iterm2"
   "zed"
+  "gitbutler"
 
   # -- Communication Tools --
 
