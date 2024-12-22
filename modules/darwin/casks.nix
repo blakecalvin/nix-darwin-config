@@ -17,6 +17,7 @@ _:
 
   # -- Productivity Tools --
   "raycast"
+  "obsidian"
 
   # -- Browsers --
   "arc"

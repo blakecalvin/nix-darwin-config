@@ -19,6 +19,9 @@ with pkgs; [
   gitui
   #zip
 
+  cargo
+  rustc
+
   # Encryption and security tools
   #age
   #age-plugin-yubikey
