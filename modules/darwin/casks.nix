@@ -2,7 +2,6 @@ _:
 
 [
   # -- Development Tools --
-  "ghosttile"
   "iterm2"
   "ghostty"
   "zed"
