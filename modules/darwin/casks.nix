@@ -3,6 +3,7 @@ _:
 [
   # -- Development Tools --
   "iterm2"
+  "ghosttile"
   "ghostty"
   "zed"
   "gitbutler"
