@@ -3,7 +3,8 @@ _:
 [
   # -- Development Tools --
   "iterm2"
-  "ghostty"
+  # Homemanager seems to not have the most updated casks yet, check back later
+  # "ghostty"
   "zed"
   "gitbutler"
 
