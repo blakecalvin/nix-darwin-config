@@ -78,7 +78,7 @@ in
   # Fully declarative dock using the latest from Nix Store
   local.dock.enable = true;
   local.dock.entries = [
-    { path = "/Applications/Launchpad.app/"; }
+    # { path = "/Applications/Launchpad.app/"; }
     { path = "/Applications/Arc.app/"; }
     { path = "/Applications/Zed.app/"; }
     { path = "/Applications/iTerm.app/"; }
