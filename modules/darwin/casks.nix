@@ -7,6 +7,7 @@ _:
   # "ghostty"
   "zed"
   "gitbutler"
+  "lm-studio"
 
   # -- Communication Tools --
 
