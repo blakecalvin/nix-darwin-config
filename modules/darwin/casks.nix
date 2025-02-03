@@ -4,7 +4,7 @@ _:
   # -- Development Tools --
   "iterm2"
   # Homemanager seems to not have the most updated casks yet, check back later
-  # "ghostty"
+  "ghostty"
   "zed"
   "gitbutler"
   "lm-studio"
