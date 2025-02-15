@@ -42,6 +42,7 @@ in
     masApps = {
       # waiting on bug fix for mas for this to work https://github.com/mas-cli/mas/pull/535
       #"Hyperduck" = 2145267525;
+      "Anybox" = 1593408455;
       "Affinity Designer 2" = 1616831348;
       "Affinity Publisher 2" = 1606941598;
       "Affinity Photo 2" = 1616822987;
