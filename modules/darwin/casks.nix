@@ -8,7 +8,7 @@ _:
   "zed"
   "gitbutler"
   "lm-studio"
-  "insomnia"
+  "rapidapi"
 
   # -- Communication Tools --
 
