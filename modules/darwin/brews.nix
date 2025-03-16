@@ -1,6 +1,4 @@
 _:
 
 [
-  # Utilities
-  "jordanbaird-ice"
 ]

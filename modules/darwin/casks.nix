@@ -17,7 +17,9 @@ _:
   # sandboxed, therefore use the nixpkgs version.
   # "tailscale"
   "monitorcontrol"
-  "badgeify"
+  # this one doesn't work for right now, need to look for apple silicon version
+  # "badgeify"
+  "jordanbaird-ice"
 
   # -- Entertainment Tools --
 
