@@ -17,6 +17,7 @@ _:
   # sandboxed, therefore use the nixpkgs version.
   # "tailscale"
   "monitorcontrol"
+  "badgeify"
 
   # -- Entertainment Tools --
 
