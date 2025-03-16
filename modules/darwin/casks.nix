@@ -16,6 +16,7 @@ _:
   # Tailscale in casks and MAS cannot use SSH as they are
   # sandboxed, therefore use the nixpkgs version.
   # "tailscale"
+  "monitorcontrol"
 
   # -- Entertainment Tools --
 
