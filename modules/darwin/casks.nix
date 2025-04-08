@@ -20,6 +20,7 @@ _:
   # this one doesn't work for right now, need to look for apple silicon version
   # "badgeify"
   "jordanbaird-ice"
+  "syntax-highlight"
 
   # -- Entertainment Tools --
 
