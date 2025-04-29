@@ -8,7 +8,6 @@ _:
   "zed"
   "gitbutler"
   "lm-studio"
-  "anythingllm"
   "rapidapi"
 
   # -- Communication Tools --
