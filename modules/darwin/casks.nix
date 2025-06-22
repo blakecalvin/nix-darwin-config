@@ -3,11 +3,9 @@ _:
 [
   # -- Development Tools --
   "iterm2"
-  # Homemanager seems to not have the most updated casks yet, check back later
   "ghostty"
   "zed"
   "gitbutler"
-  "anythingllm"
   "rapidapi"
 
   # -- Communication Tools --

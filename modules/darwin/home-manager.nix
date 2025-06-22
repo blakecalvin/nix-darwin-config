@@ -45,7 +45,7 @@ in
       "Affinity Designer 2" = 1616831348;
       "Affinity Publisher 2" = 1606941598;
       "Affinity Photo 2" = 1616822987;
-      "Darkroom" = 953286746;
+      # "Darkroom" = 953286746;
       "Hidden Bar" = 1452453066;
       "Bitwarden" = 1352778147;
       "Xcode" = 497799835;
