@@ -7,7 +7,7 @@ _:
   "ghostty"
   "zed"
   "gitbutler"
-  "lm-studio"
+  "anythingllm"
   "rapidapi"
 
   # -- Communication Tools --
@@ -19,7 +19,6 @@ _:
   "monitorcontrol"
   # this one doesn't work for right now, need to look for apple silicon version
   # "badgeify"
-  "jordanbaird-ice"
 
   # -- Entertainment Tools --
 
