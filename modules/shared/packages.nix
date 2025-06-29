@@ -56,5 +56,5 @@ with pkgs; [
   #unrar
   #unzip
   #zsh-powerlevel10k
-  gemini-cli
+  #gemini-cli
 ]
