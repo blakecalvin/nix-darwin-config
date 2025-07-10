@@ -57,5 +57,5 @@ with pkgs; [
   #unzip
   #zsh-powerlevel10k
   #gemini-cli
-  claude-code
+  #claude-code
 ]
