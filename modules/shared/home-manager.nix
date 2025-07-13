@@ -21,7 +21,7 @@ let name = "Blake";
       #}
     ];
 
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
         . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
         . /nix/var/nix/profiles/default/etc/profile.d/nix.sh
@@ -31,7 +31,6 @@ let name = "Blake";
       #export PATH=$HOME/.pnpm-packages/bin:$HOME/.pnpm-packages:$PATH
       #export PATH=$HOME/.npm-packages/bin:$HOME/bin:$PATH
       export PATH=$HOME/.local/share/bin:$PATH
-      export PATH=$HOME/.cargo/bin:$PATH
 
       # Remove history data we don't want to see
       export HISTIGNORE="pwd:ls:cd"
@@ -75,20 +74,11 @@ let name = "Blake";
       pull.rebase = true;
       rebase.autoStash = true;
     };
-    # Setup seperate git config for development
-    # includes = [{
-    #   condition = "gitdir:~/Developer/aerial-coterie/**";
-    #   contents = {
-    #     init.defaultBranch = "main";
-    #     user.name = "aerial dev";
-    #     user.email = "aerial-coterie@gmail.com";
-    #   };
-    # }];
   };
 
   vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify ];
+    plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
     settings = { ignorecase = true; };
     extraConfig = ''
       "" General
@@ -224,7 +214,7 @@ let name = "Blake";
   tmux = {
     enable = true;
     plugins = with pkgs.tmuxPlugins; [
-      #vim-tmux-navigator
+      vim-tmux-navigator
       sensible
       yank
       prefix-highlight
@@ -304,14 +294,4 @@ let name = "Blake";
       #bind-key -T copy-mode-vi 'C-\' select-pane -l
       '';
     };
-
-    # Setup later...
-    # Used to load env when changing into directory with .envrc setup
-    # direnv = {
-    #     enable = true;
-    #     enableBashIntegration = true; # see note on other shells below
-    #     nix-direnv.enable = true;
-    # };
-
-    # bash.enable = true; # see note on other shells below
 }

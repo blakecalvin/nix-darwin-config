@@ -1,11 +1,5 @@
 {
   description = "Starter Configuration for MacOS and NixOS";
-  # https://github.com/dustinlyons/nixos-config
-
-  # Test build config
-  # nix run .#build
-  # Run changes
-  # nix run .#build-switch
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

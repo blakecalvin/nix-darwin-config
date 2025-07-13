@@ -3,10 +3,10 @@
 let
   user = "blakecalvin";
   # Define the content of your file as a derivation
-  #myEmacsLauncher = pkgs.writeScript "emacs-launcher.command" ''
-  #  #!/bin/sh
-  #  emacsclient -c -n &
-  #'';
+  myEmacsLauncher = pkgs.writeScript "emacs-launcher.command" ''
+    #!/bin/sh
+    emacsclient -c -n &
+  '';
   sharedFiles = import ../shared/files.nix { inherit config pkgs; };
   additionalFiles = import ./files.nix { inherit user config pkgs; };
 in
@@ -26,7 +26,6 @@ in
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
-    brews = pkgs.callPackage ./brews.nix {};
     # onActivation.cleanup = "uninstall";
 
     # These app IDs are from using the mas CLI app
@@ -62,8 +61,6 @@ in
         file = lib.mkMerge [
           sharedFiles
           additionalFiles
-	  # Use this to add additional
-          #{ "emacs-launcher.command".source = myEmacsLauncher; }
         ];
         stateVersion = "23.11";
       };
@@ -76,8 +73,10 @@ in
   };
 
   # Fully declarative dock using the latest from Nix Store
-  local.dock.enable = true;
-  local.dock.entries = [
+  local.dock = {
+    enable = true;
+    username = user;
+    entries = [
     # { path = "/Applications/Launchpad.app/"; }
     { path = "/Applications/Arc.app/"; }
     { path = "/Applications/Zed.app/"; }
@@ -93,6 +92,12 @@ in
       section = "others";
       options = "--sort name --view grid --display stack";
     }
+    {
+      path = "${config.users.users.${user}.home}/.local/share/downloads";
+      section = "others";
+      options = "--sort name --view grid --display stack";
+    }
   ];
+  };
 
 }

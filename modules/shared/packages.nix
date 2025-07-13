@@ -14,7 +14,7 @@ with pkgs; [
   openssh
   #sqlite
   wget
-  tailscale
+  # tailscale
   gh
   gitui
   #zip
@@ -57,5 +57,5 @@ with pkgs; [
   #unzip
   #zsh-powerlevel10k
   #gemini-cli
-  #claude-code
+  claude-code
 ]

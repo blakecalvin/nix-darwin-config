@@ -8,10 +8,9 @@ let user = "blakecalvin"; in
     ../../modules/shared
   ];
 
-  services.nix-daemon.enable = true;
-
   nix = {
     package = pkgs.nix;
+
     settings = {
       trusted-users = [ "@admin" "${user}" ];
       substituters = [ "https://nix-community.cachix.org" "https://cache.nixos.org" ];
@@ -19,41 +18,31 @@ let user = "blakecalvin"; in
     };
 
     gc = {
-      user = "root";
       automatic = true;
       interval = { Weekday = 0; Hour = 2; Minute = 0; };
       options = "--delete-older-than 30d";
     };
 
-    # Removed extra-nix-path = nixpkgs=flake:nixpkgs because nix develop is successor
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
   };
 
-  system.checks.verifyNixPath = false;
 
   environment.systemPackages = with pkgs; [
-    #emacs-unstable
+    # emacs-unstable
   ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
 
   # add the services
   # Needed to enable SSH connections for tailscale
-  services.tailscale.enable = true;
+  # services.tailscale.enable = true;
 
-  #launchd.user.agents.emacs.path = [ config.environment.systemPath ];
-  #launchd.user.agents.emacs.serviceConfig = {
-  #  KeepAlive = true;
-  #  ProgramArguments = [
-  #    "/bin/sh"
-  #    "-c"
-  #    "/bin/wait4path ${pkgs.emacs}/bin/emacs && exec ${pkgs.emacs}/bin/emacs --fg-daemon"
-  #  ];
-  #  StandardErrorPath = "/tmp/emacs.err.log";
-  #  StandardOutPath = "/tmp/emacs.out.log";
-  #};
+  # Update id to match system
+  ids.gids.nixbld = 350;
 
   system = {
+    checks.verifyNixPath = false;
+    primaryUser = user;
     stateVersion = 4;
 
     defaults = {
